@@ -11,14 +11,14 @@
     <canvas id="canvas1" width="250" height="500"></canvas>
   </div>
   <input type="button" id="restartButton" value="Restart Game" class="hide" />
-  <div id="gameInProgress">Game is in progress.  You will automatically join if either player leaves.</div>
+  <div id="gameInProgress">Game em progresso.  Você jogará automaticamente quando alguem sair.</div>
 
 
 <script>
 
   var canvas = $("#canvas0").get(0);
   if (!canvas || !canvas.getContext || !canvas.getContext('2d'))
-    alert("You must use a browser that supports HTML5 Canvas to run this demo.");
+    alert("Você precisa ter um browser que suporte HTML 5.");
 
   function start() {
     var tetrisRef = new Firebase('https://amber-heat-2121.firebaseio.com/');
