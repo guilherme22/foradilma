@@ -141,7 +141,7 @@
 
       </div>
       <div class="modal-footer">
-        <button type="button" data-dismiss="modal"  class="btn btn-primary" >Ok, entendido.</button>
+        <button type="button" data-dismiss="modal" id="closeButton"  class="btn btn-primary" >Ok, entendido.</button>
       </div>
     </div>
   </div>
@@ -343,10 +343,13 @@
     <script src="js/ie10-viewport-bug.workaroud.js"></script>
     <script>
     $(function() {
-   $("#myModal").modal();
+      var isReturn = localStorage.getItem('isReturn');
+        if(!isReturn)
+          $("#myModal").modal();
 });
     $('#closeButton').on('click', function(){
-        window.open('https://www.facebook.com/foradilmacompt', '_blank');
+      localStorage.setItem('isReturn', true);
+       // window.open('https://www.facebook.com/foradilmacompt', '_blank');
 
     })
     </script>
